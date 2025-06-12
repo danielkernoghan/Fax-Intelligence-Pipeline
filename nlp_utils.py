@@ -2,8 +2,8 @@ import torch
 from transformers import BertTokenizer, BertForSequenceClassification, pipeline
 
 # Load models
-model = BertForSequenceClassification.from_pretrained("C:\\Users\\kernoghand\\Documents\\Fax OCR\\ClinicalBERT\\v2_ClinicalBERT_saved_trained_model")
-tokenizer = BertTokenizer.from_pretrained("C:\\Users\\kernoghand\\Documents\\Fax OCR\\ClinicalBERT\\v2_ClinicalBERT_saved_trained_model")
+model = BertForSequenceClassification.from_pretrained("PATH")
+tokenizer = BertTokenizer.from_pretrained("PATH")
 nlp = pipeline("document-question-answering", model="impira/layoutlm-document-qa")
 
 health_number_questions = [
